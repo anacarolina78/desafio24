@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nomes Aleatórios</title>
+    <body bgcolor="#191970">
+
+      <h1>Nome Aleatório</h1>
+      <center><button onclick="mostrarNome()">Gerar Nome Aleatório</button></center>
+      <div id="nome"></div>
+      <style>
+        *{
+          color: white;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 30px;
+          text-transform: uppercase;
+          text-align: center;
+        }
+        #nome{
+          text-align: center;
+          padding: 15px;
+        }
+        button{
+          border-style: none;
+          padding: 15px;
+          border-radius: 30px;
+          cursor: pointer;
+          color: #191970;
+
+        }
+        button:hover{
+         transition: 0.2s;
+         background-color: #5151a0;
+         color: white;
+        }
+     
+      </style>
+    <script>
+      function obterNomeAleatorio() {
+        // Lista de nomes
+        const nomes = [
+            "Ana",
+            "Billie",
+            "Camilla",
+            "David",
+            "Eduarda",
+            "Fabiana",
+            "Giulia",
+            "Higor",
+            "Isabelly",
+            "Juliana",
+        ];
+
+        const nomeAleatorio = Math.floor(Math.random() * nomes.length);
+        return nomes[nomeAleatorio];
+      }
+
+      function mostrarNome() {
+      const nome = obterNomeAleatorio();
+      document.getElementById("nome").textContent = nome;
+      }
+    </script>
+  </head>
+  
+  </body>
+</html>
